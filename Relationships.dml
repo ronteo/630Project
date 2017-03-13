@@ -1,0 +1,1 @@
+INSERT INTO Relationships VALUES ('Person', 'Faculty', '1:1', 0, 'D', 'None');
