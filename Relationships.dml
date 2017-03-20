@@ -1,1 +1,16 @@
-INSERT INTO Relationships VALUES ('Person', 'Faculty', '1:1', 0, 'D', 'None');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type') VALUES ('Person', 'Faculty', '1:1', 'D');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type') VALUES ('Person', 'Student', '1:1', 'D');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type') VALUES ('Student', 'Grad_Student', '1:1', 'D');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Student', 'Department', 'M:1', 'N/A', 'Majors_in');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Student', 'Section', 'M:N', 'N/A', 'Earns');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Student', 'Section', 'M:N', 'N/A', 'Registers_for');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Faculty', 'Department', 'M:1', 'N/A', 'Works_in');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Faculty', 'Department', '1:1', 'N/A', 'Chairs');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Faculty', 'Grad_Student', '1:M', 'N/A', 'Advises');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Faculty', 'Grant', 'M:N', 'N/A', 'Owns');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Faculty', 'Section', '1:M', 'N/A', 'Teaches');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Grant', 'Grad_Student', 'M:N', 'N/A', 'Works_on');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Grad_Student', 'Section', 'M:N', 'N/A', 'Tutors');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Section', 'Course', 'M:1', 'N/A', 'Has');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Department', 'College', 'M:1', 'N/A', 'Is_within');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Department', 'Course', '1:M', 'N/A', 'Offers');
