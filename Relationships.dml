@@ -14,3 +14,4 @@ INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES 
 INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Section', 'Course', 'M:1', 'N/A', 'Has');
 INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Department', 'College', 'M:1', 'N/A', 'Is_within');
 INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type', 'AName') VALUES ('Department', 'Course', '1:M', 'N/A', 'Offers');
+INSERT INTO Relationships ('From', 'To', 'Cardinality', 'Type') VALUES ('Age', 'DOB', '1:1', 'Derived'); 
