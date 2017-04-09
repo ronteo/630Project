@@ -1,0 +1,34 @@
+INSERT INTO Relationships VALUES ('Person', 'Faculty', '1:1', 'ReId', 'D');
+Relationships must have attributes because Relationships have an fk to Atrributes.AName which is a pk, No attribute name for the disjoined relationship
+INSERT INTO Relationships VALUES ('Person', 'Student', '1:1', 'ReId', 'D', 'None');
+INSERT INTO Relationships VALUES ('Student', 'Grad_Student', '1:1', 'ReId', 'D', 'None');
+INSERT INTO Relationships VALUES ('Student', 'Department', 'M:1', 'ReId', 'N/A', 'Majors_in');
+INSERT INTO Relationships VALUES ('Student', 'Section', 'M:N', 'ReId', 'N/A', 'Earns');
+INSERT INTO Relationships VALUES ('Student', 'Section', 'M:N', 'ReId', 'N/A', 'Registers_for');
+INSERT INTO Relationships VALUES ('Faculty', 'Department', 'M:1', 'ReId', 'N/A', 'Works_in');
+INSERT INTO Relationships VALUES ('Faculty', 'Department', '1:1', 'ReId', 'N/A', 'Chairs');
+INSERT INTO Relationships VALUES ('Faculty', 'Grad_Student', '1:M', 'ReId', 'N/A', 'Advises');
+INSERT INTO Relationships VALUES ('Faculty', 'Grant', 'M:N', 'ReId', 'N/A', 'Owns');
+INSERT INTO Relationships VALUES ('Faculty', 'Section', '1:M', 'ReId', 'N/A', 'Teaches');
+INSERT INTO Relationships VALUES ('Grant', 'Grad_Student', 'M:N', 'ReId', 'N/A', 'Works_on');
+INSERT INTO Relationships VALUES ('Grad_Student', 'Section', 'M:N', ReId', 'N/A', 'Tutors');
+INSERT INTO Relationships VALUES ('Secion', 'Course', 'M:1', 'ReId', 'N/A', 'Has');
+INSERT INTO Relationships VALUES ('Department', 'College', 'M:1', ReId', 'N/A', 'Is_within');
+INSERT INTO Relationships VALUES ('Department', 'Course', '1:M', 'ReId', 'N/A', 'Offers');
+INSERT INTO Relationships ('From', 'To', 'Type') VALUES ('Age', 'DOB', 'Derived'); 
+From, To, Cardinality, ReId, Type, AName
+
+We need Attribute Attributes Table to handle Attribute Attributes (Name, Address)
+
+For Age attribute, we included in Relationships table
+
+Attributes
+
+INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('Grant', '',
+INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
+INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
+INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
+INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
+INSERT INTO Attributes VALUES ('
+INSERT INTO Attributes VALUES ('
+INSERT INTO Attributes VALUES ('
