@@ -24,11 +24,37 @@ For Age attribute, we included in Relationships table
 
 Attributes
 
-INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('Grant', '',
-INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
-INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
-INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
-INSERT INTO Attributes ('EName', 'AName', 'IsPK') VALUES ('
-INSERT INTO Attributes VALUES ('
-INSERT INTO Attributes VALUES ('
-INSERT INTO Attributes VALUES ('
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Salary', 'Faculty', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Foffice','Faculty', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Rank', 'Faculty', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Fphone', 'Faculty', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Date', 'Grant', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Title', 'Grant', 1);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Amount', 'Grant', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Degree', 'Grad_student', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Class', 'Student', 0); 
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Year', 'Section', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Sec#', 'Section', 1);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Qtr', 'Section', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Office', 'Department', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Dphone', 'Department', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Dname', 'Department', 1);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('CLName', 'College', 1);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('Dean', 'College', 0); 
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('C#', 'Course', 1);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('CName', 'Course', 0);
+INSERT INTO Attributes ('AName', 'EName', 'IsPK') VALUES ('CTitle', 'Course', 0);
+
+CREATE VIEW AttDatatype
+AS SELECT AName, DataType
+FROM Attributes
+
+CREATE VIEW EntKey
+AS SELECT EName, AName 
+FROM Attributes
+WHERE IsPK = 1
+
+CREATE VIEW RelAtt
+AS SELECT RelationshipName, AName
+FROM Relationships
+WHERE AName NOTNULL
